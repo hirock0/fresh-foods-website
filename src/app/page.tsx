@@ -1,101 +1,146 @@
+import HeroSection from "@/components/hero_section/heroSection";
+import { AiOutlineLike } from "react-icons/ai";
+import { CiDeliveryTruck } from "react-icons/ci";
+import { AiOutlineSafety } from "react-icons/ai";
 import Image from "next/image";
-
-export default function Home() {
+const Home = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main>
+      {/* hero_section_start */}
+      <div className=" container mx-auto px-5">
+        <HeroSection />
+      </div>
+      {/* hero_section_end */}
+      {/* section_2_start */}
+      <div className=" bg-lime-600 text-white py-20">
+        <div className="container mx-auto px-5 grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-5">
+          <div className=" flex flex-col justify-center items-center gap-5">
+            <div className=" p-2  border-2  rounded-full">
+              <AiOutlineLike size={20} />
+            </div>
+            <h1 className=" text-3xl max-sm:text-2xl font-semibold text-center">
+              High Quality
+            </h1>
+            <p className=" text-center opacity-90">
+              Best in the market. We deal with
+              <br /> various quality organic products!
+            </p>
+          </div>
+          <div className=" flex flex-col justify-center items-center gap-5">
+            <CiDeliveryTruck size={45} />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <h1 className=" text-3xl max-sm:text-2xl font-semibold text-center">
+              First Delivery
+            </h1>
+            <p className=" text-center opacity-90">
+              Just click and the product will reach
+              <br /> your home or office quickly.
+            </p>
+          </div>
+          <div className=" flex flex-col justify-center items-center gap-5">
+            <AiOutlineSafety size={45} />
+
+            <h1 className=" text-3xl max-sm:text-2xl font-semibold text-center">
+              100% Safe
+            </h1>
+            <p className=" text-center opacity-90">
+              Verified payment gateway and free
+              <br /> returns track or cancel orders.
+            </p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+      {/* section_2_end */}
+
+      {/* section_3_start */}
+
+      <div className=" flex justify-center mt-10">
+        {/* --------------------------- */}
+        <div className=" container mx-auto px-5 flex max-md:flex-col max-md:items-center gap-5">
+          {/* ---------------------- */}
+          <div className=" w-full grid lg:grid-cols-2 max-lg:grid-cols-1  gap-5">
+            <div className=" relative h-[500px] bg-zinc-200  rounded-lg overflow-hidden shadow-md max-md:h-[300px]  lg:col-span-2  ">
+              <Image
+                src={"/category_images/image_3.3.png"}
+                alt="cat"
+                width={500}
+                height={500}
+                className=" w-full h-full object-cover"
+              />
+              <button className=" absolute bottom-10 left-10 bg-white h-20 w-3/6 font-semibold rounded-sm shadow-lg">
+                GROCERY
+              </button>
+            </div>
+            <div className=" relative h-[500px]  max-md:h-[300px] bg-zinc-200  overflow-hidden  rounded-lg shadow-md  ">
+              <Image
+                src={"/category_images/image_4.4.png"}
+                alt="cat"
+                width={500}
+                height={500}
+                className=" w-full h-full object-cover"
+              />
+              <button className=" absolute bottom-10 left-10 bg-white h-20 w-3/6 font-semibold rounded-sm shadow-lg">
+                GROCERY
+              </button>
+            </div>
+            <div className=" relative h-[500px]  max-md:h-[300px] bg-zinc-200 overflow-hidden  rounded-lg shadow-md  ">
+              <Image
+                src={"/category_images/image_5.5.5.png"}
+                alt="cat"
+                width={500}
+                height={500}
+                className=" w-full h-full object-cover"
+              />
+              <button className=" absolute bottom-10 left-10 bg-white h-20 w-3/6 font-semibold rounded-sm shadow-lg">
+                GROCERY
+              </button>
+            </div>
+          </div>
+          {/* --------------------------- */}
+          {/* ----------------------------- */}
+          <div className=" grid gap-5 w-full">
+            <div className=" relative h-[400px]  max-md:h-[300px]  bg-zinc-200  overflow-hidden  rounded-lg shadow-md  ">
+              <Image
+                src={"/category_images/image_1.1.1.png"}
+                alt="cat"
+                width={500}
+                height={500}
+                className=" w-full h-full object-cover"
+              />
+              <button className=" absolute bottom-10 left-10 bg-white h-20 w-3/6 font-semibold rounded-sm shadow-lg">
+                GROCERY
+              </button>
+            </div>
+            <div className=" relative h-[600px] bg-zinc-200 rounded-lg overflow-hidden shadow-md max-md:h-[300px] ">
+              <Image
+                src={"/category_images/image_6.6.6.png"}
+                alt="cat"
+                width={500}
+                height={500}
+                className=" w-full h-full object-cover"
+              />
+              <button className=" absolute bottom-10 left-10 bg-white h-20 w-3/6 font-semibold rounded-sm shadow-lg">
+                GROCERY
+              </button>
+            </div>
+          </div>
+          {/* ---------------- */}
+        </div>
+      </div>
+      {/* section_3_end */}
+      {/* view_all_start */}
+
+      <div className=" my-20">
+        <div className=" container mx-auto px-5 flex items-center justify-between">
+          <h1>New Arrivals</h1>
+          <button className=" h-12 w-1/6 max-md:w-2/6 border-black border-2">
+            VIEW ALL
+          </button>
+        </div>
+      </div>
+      {/* view_all_end */}
+    </main>
   );
-}
+};
+
+export default Home;

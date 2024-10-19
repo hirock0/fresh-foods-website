@@ -1,0 +1,3 @@
+.NavUl::-webkit-scrollbar{
+    display: none;
+}
