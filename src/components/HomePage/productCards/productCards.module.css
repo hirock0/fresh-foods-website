@@ -1,0 +1,15 @@
+.arrival > div {
+  @apply bg-white overflow-hidden pb-10 rounded-lg shadow-md;
+}
+.arrival > div > div:nth-child(1) {
+  @apply h-96 overflow-hidden;
+}
+.arrival > div > div:nth-child(1) > img {
+  @apply w-full h-full object-cover hover:scale-110 hover:transition-all;
+}
+.arrival > div > div:nth-child(2) {
+  @apply p-5 max-md:p-0 max-md:flex max-md:flex-col max-md:items-center;
+}
+.arrival > div > div:nth-child(2) > h1 {
+  @apply text-xl font-semibold mb-5;
+}

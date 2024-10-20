@@ -1,11 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
-body{
-    @apply bg-zinc-100
+body {
+  @apply bg-zinc-100;
+}
+.section_2 > div > div {
+  @apply flex flex-col justify-center items-center gap-5;
+}
+.section_2 > div > div > h1 {
+  @apply text-3xl max-sm:text-2xl font-semibold text-center;
+}
+.section_2 > div > div > p {
+  @apply text-center opacity-90;
+}
+.discountDiv {
+  background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../../public/images/discount.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

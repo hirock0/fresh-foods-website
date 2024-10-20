@@ -1,3 +1,6 @@
 .NavUl::-webkit-scrollbar{
     display: none;
 }
+.NavUl>ul>a>li{
+    @apply hover:underline hover:underline-offset-8
+}

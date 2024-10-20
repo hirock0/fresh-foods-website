@@ -9,15 +9,18 @@ import { RxAvatar } from "react-icons/rx";
 import { IoIosArrowDown } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import { IoCloseOutline } from "react-icons/io5";
-
+import { usePathname } from "next/navigation";
 const Nav = () => {
+  const pathName = usePathname()
   const [navFlag, setNavFlag] = useState(false);
+
+
   useEffect(() => {}, []);
   return (
-    <nav className=" sticky top-0 backdrop:filter backdrop-blur-3xl z-50 border-black flex items-center h-24">
+    <nav className=" sticky top-0 bg-zinc-100  z-50 border-black flex items-center h-24">
       <div className=" container mx-auto px-5 flex items-center justify-between">
         <div className="">
-          <div className=" w-20 h-20">
+          <div className=" w-20 h-20 ">
             <Image
               src={"/logos/logo.webp"}
               alt="logo"
@@ -49,31 +52,31 @@ const Nav = () => {
           >
             <ul
               onClick={(e) => e.stopPropagation()}
-              className={` flex items-center gap-5 max-md:flex-col  `}
+              className={` midUl text-sm text-slate-600 max-md:text-white max-md:text-xl flex items-center lg:gap-10 max-lg:gap-5 max-md:flex-col  `}
             >
-              <li>
+              <li className="">
                 <button className=" hidden max-md:block">
-                  <RxAvatar size={20} />
+                  <RxAvatar size={32} className="" />
                 </button>
               </li>
-              <Link href={""}>
-                <li>Home</li>
+              <Link href={"/"} className={`${pathName == "/"?" text-lime-600":""}`}>
+                <li>HOME</li>
               </Link>
-              <Link href={""}>
-                <li>Home</li>
+              <Link href={"/foods/products"} className={`${pathName == "/foods/products"?" text-lime-600":""}`}>
+                <li>PRODUCTS</li>
               </Link>
-              <Link href={""}>
-                <li>Home</li>
+              <Link href={"/info/about_us"} className={`${pathName == "/info/about_us"?" text-lime-600":""}`}>
+                <li>ABOUT US</li>
               </Link>
-              <Link href={""}>
-                <li>Home</li>
+              <Link href={"/info/blog"} className={`${pathName == "/info/blog"?" text-lime-600":""}`}>
+                <li>BLOG</li>
               </Link>
-              <Link href={""}>
-                <li>Home</li>
+              <Link href={"/info/contact"} className={`${pathName == "/info/contact"?" text-lime-600":""}`}>
+                <li>CONTACT</li>
               </Link>
 
               <li className=" group relative flex items-center gap-2 cursor-pointer ">
-                <span>Call Now</span>
+                <span>CALL NOW</span>
                 <IoIosArrowDown className=" rotate-180 group-hover:rotate-0" />
                 <ul className=" hidden cursor-pointer group-hover:block absolute top-5 md:bg-white md:rounded-lg md:text-black md:shadow-lg p-5">
                   <li>01700554293</li>
