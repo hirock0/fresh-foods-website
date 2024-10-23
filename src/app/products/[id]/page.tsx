@@ -5,13 +5,10 @@ import { useEffect, useState } from "react"
 import { useSelector,useDispatch } from "react-redux"
 
 
-interface Props{
-    params:any,
-    id:string
-}
 
-const Products:React.FC<Props> = ({params}) => {
-    const productId = params?.id || ""
+
+const Products = (props:any) => {
+    const productId =props?.params?.id || ""
 
 
     const dispatch = useDispatch()
