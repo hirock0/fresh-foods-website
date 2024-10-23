@@ -3,7 +3,9 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "@/components/nav/nav";
 import Footer from "@/components/footer/footer";
+import { Toaster } from "react-hot-toast";
 import { Poppins } from "next/font/google";
+import ReduxProvider from "@/utils/redux/providers";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -35,11 +37,22 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.className} antialiased`}
       >
-        <div className="">
-          <Nav />
-          {children}
-          <Footer />
-        </div>
+        <Toaster
+          toastOptions={{
+            style: {
+              backgroundColor: "rgba(32, 29, 87)",
+              color: "white",
+            },
+          }}
+        />
+        <ReduxProvider>
+            <div className="">
+              <Nav />
+              {children}
+              <Footer />
+            </div>
+        </ReduxProvider>
+
       </body>
     </html>
   );

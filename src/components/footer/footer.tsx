@@ -1,31 +1,15 @@
+
 import Image from "next/image";
 import Link from "next/link";
-
+import FooterNavLinks from "../footerNavLinks/footerNavLinks";
 const Footer = () => {
   return (
     <footer className="">
       <nav className=" text-white flex items-center bg-lime-600 h-24 max-md:h-auto max-md:py-10">
         <div className=" flex max-md:flex-col items-center justify-between container mx-auto px-5">
-          <ul className=" flex max-md:flex-wrap max-md:justify-center  items-center gap-5">
-            <Link href={""}>
-              <li>Home</li>
-            </Link>
-            <Link href={""}>
-              <li>Home</li>
-            </Link>
-            <Link href={""}>
-              <li>Home</li>
-            </Link>
-            <Link href={""}>
-              <li>Home</li>
-            </Link>
-            <Link href={""}>
-              <li>Home</li>
-            </Link>
-            <Link href={""}>
-              <li>Home</li>
-            </Link>
-          </ul>
+          
+            <FooterNavLinks/>
+          
           <div className=" max-md:mt-5">
             <ul className=" flex items-center gap-5">
               <Link href={""}>

@@ -82,6 +82,10 @@ const Nav = () => {
                   <li>01700554293</li>
                   <li>01945055264</li>
                   <li>01252552525</li>
+                  <Link href={"/admin/upload_products"}>
+                   <li>Admin</li>
+                  </Link>
+                  
                 </ul>
               </li>
             </ul>

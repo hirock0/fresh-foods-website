@@ -1,0 +1,3 @@
+.categoryDiv>div>a{
+    @apply absolute bottom-10 left-10 bg-white h-20 w-3/6 font-semibold rounded-sm shadow-lg flex items-center justify-center
+}

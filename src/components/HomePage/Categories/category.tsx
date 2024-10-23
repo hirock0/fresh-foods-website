@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link'
 import Style from './category.module.css'
 import Image from "next/image"
 const Category = () => {
@@ -6,7 +7,7 @@ const Category = () => {
 
         <div className=" container mx-auto px-5 flex max-md:flex-col max-md:items-center gap-5">
             {/* ---------------------- */}
-            <div className=" w-full grid lg:grid-cols-2 max-lg:grid-cols-1  gap-5">
+            <div className={`${Style.categoryDiv} w-full grid lg:grid-cols-2 max-lg:grid-cols-1  gap-5`}>
                 <div className=" relative h-[500px] bg-zinc-200  rounded-lg overflow-hidden shadow-md max-md:h-[300px]  lg:col-span-2  ">
                 <Image
                     src={"/category_images/image_3.3.png"}
@@ -15,10 +16,11 @@ const Category = () => {
                     height={500}
                     className=" w-full h-full object-cover"
                 />
-                <button className=" absolute bottom-10 left-10 bg-white h-20 w-3/6 font-semibold rounded-sm shadow-lg">
+                <Link href={"/categoryFoods/grocery"} className=" ">
                     GROCERY
-                </button>
+                </Link>
                 </div>
+
                 <div className=" relative h-[500px]  max-md:h-[300px] bg-zinc-200  overflow-hidden  rounded-lg shadow-md  ">
                 <Image
                     src={"/category_images/image_4.4.png"}
@@ -27,9 +29,9 @@ const Category = () => {
                     height={500}
                     className=" w-full h-full object-cover"
                 />
-                <button className=" absolute bottom-10 left-10 bg-white h-20 w-3/6 font-semibold rounded-sm shadow-lg">
-                    GROCERY
-                </button>
+                <Link href={"/"} className=" ">
+                    MANGO
+                </Link>
                 </div>
                 <div className=" relative h-[500px]  max-md:h-[300px] bg-zinc-200 overflow-hidden  rounded-lg shadow-md  ">
                 <Image
@@ -39,14 +41,14 @@ const Category = () => {
                     height={500}
                     className=" w-full h-full object-cover"
                 />
-                <button className=" absolute bottom-10 left-10 bg-white h-20 w-3/6 font-semibold rounded-sm shadow-lg">
-                    GROCERY
-                </button>
+                <Link href={"/"} className=" ">
+                    HONEY
+                </Link>
                 </div>
             </div>
             {/* --------------------------- */}
             {/* ----------------------------- */}
-            <div className=" grid gap-5 w-full">
+            <div className={`${Style.categoryDiv} grid gap-5 w-full`}>
                 <div className=" relative h-[400px]  max-md:h-[300px]  bg-zinc-200  overflow-hidden  rounded-lg shadow-md  ">
                 <Image
                     src={"/category_images/image_1.1.1.png"}
@@ -55,9 +57,9 @@ const Category = () => {
                     height={500}
                     className=" w-full h-full object-cover"
                 />
-                <button className=" absolute bottom-10 left-10 bg-white h-20 w-3/6 font-semibold rounded-sm shadow-lg">
-                    GROCERY
-                </button>
+                <Link href={"/"} className=" ">
+                    FOOD
+                </Link>
                 </div>
                 <div className=" relative h-[600px] bg-zinc-200 rounded-lg overflow-hidden shadow-md max-md:h-[300px] ">
                 <Image
@@ -67,9 +69,9 @@ const Category = () => {
                     height={500}
                     className=" w-full h-full object-cover"
                 />
-                <button className=" absolute bottom-10 left-10 bg-white h-20 w-3/6 font-semibold rounded-sm shadow-lg">
-                    GROCERY
-                </button>
+                <Link href={"/"} className=" ">
+                    HOMELY
+                </Link>
                 </div>
             </div>
             {/* ---------------- */}

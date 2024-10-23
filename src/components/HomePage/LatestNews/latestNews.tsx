@@ -53,7 +53,7 @@ const LatestNews = () => {
           <div className="  flex flex-col gap-5 p-5">
             <h1>{item.name}</h1>
             <h1 className=" text-2xl font-semibold">{item.title}</h1>
-            <p>{item.descriptions}</p>
+            <p className=" opacity-80">{item.descriptions}</p>
           </div>
         </div>
       ))}

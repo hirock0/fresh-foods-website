@@ -9,6 +9,7 @@
 body {
   @apply bg-zinc-100;
 }
+
 .section_2 > div > div {
   @apply flex flex-col justify-center items-center gap-5;
 }
